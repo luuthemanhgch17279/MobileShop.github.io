@@ -32,7 +32,7 @@ function loadListCartProduct() {
             };
             cartContent.innerHTML += `
         <div class = "totalCart">
-            <h4>Total Bill: ${convertVND(cartTotal)} vnđ</h4> 
+            <h4>Cần Thanh Toán: ${convertVND(cartTotal)} vnđ</h4> 
         </div>`
         };
     } else {

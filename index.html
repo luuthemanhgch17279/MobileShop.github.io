@@ -6,38 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Shop</title>
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://kit.fontawesome.com/d22d9dd2e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
     <!-- Header of Web Page -->
-    <header class="container">
+    <header>
+        <div id="cart_form">
+            <div id="cart-show" class="cart-header">
+                <div class="container">
+                    <a href="cart.html">
+                        <span id="cartNumbers">0</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <button class="btn-log" id="btn_login">Đăng nhập</button>
+                    <button class="btn-log" id="btn_logout">Đăng xuất</button>
+                </div>
+            </div>
+        </div>
         <div class="head">
-            <h1 class="bold">Mobile Shop</h1>
+            <h1 class="bold">Mobile shop</h1>
         </div>
 
         <div class="nav">
-            <ul>
-                <li><a href="index.html"><button>Trang chủ</button></a></li>
-                <li><button id="btn_login">Đăng nhập</button></li>
-                <li><button id="btn_logout">Đăng xuất</button></li>
-                <li><button id="btnManageBill">Quản lý đơn hàng</button></li>
-                <li><button id="btnManageProduct">Quản Lý sản phẩm</button></li>
-                <li><button id="btnAdd">Thêm Sản Phẩm</button></li>
-            </ul>
-            <div class="search">
-                <input id="searchKey" type="text" placeholder="Tìm Kiếm">
-                <button id="btnSearch"><i class="fas fa-search"></i></button>
-                <ul id="listSearch">
-                    <!-- <li class="item">
-                        <img src="" alt="">
-                        <span>Name</span>
-                    </li> -->
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><button>Trang chủ</button></a></li>
+                    <li><a href="#"><button>Giới Thiệu</button></a></li>
+                    <li><button id="btnManageBill">Quản lý đơn hàng</button></li>
+                    <li><button id="btnManageProduct">Quản Lý sản phẩm</button></li>
+                    <li><button id="btnAdd">Thêm Sản Phẩm</button></li>
+                    <li>
+                        <div class="search">
+                            <input id="searchKey" type="text" placeholder="Tìm Kiếm">
+                            <ul id="listSearch">
+                                <!-- JS code -->
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,17 +64,7 @@
             <img class="mySlides" src="./asset/image/ad3.png">
             <img class="mySlides" src="./asset/image/ad4.png">
         </div>
-
-        <div id="filter_form">
-            <div id="filterBrand">
-                <ul id="listBrand">
-                    <!-- Js-code -->
-                </ul>
-                <div class="content">
-                    <ul id="loadProduct"></ul>
-                </div>
-            </div>
-        </div>
+        <hr>
 
         <div class="logIn" id="login_form">
             <div>
@@ -96,14 +99,16 @@
             </div>
         </div>
 
-        <div id="cart_form">
-            <a href="cart.html">
-                <div id="cart-show">
-                    <!-- <h3>Cart</h3>    -->
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cartNumbers">0</span>
+        <div id="filter_form">
+            <h1 class="bold">Lọc Sản Phẩm</h1>
+            <div id="filterBrand">
+                <ul id="listBrand">
+                    <!-- Js-code -->
+                </ul>
+                <div class="content">
+                    <ul id="loadProduct"></ul>
                 </div>
-            </a>
+            </div>
         </div>
 
         <div id="user_form">
@@ -112,10 +117,10 @@
                     <!-- js Code -->
                 </ul>
             </div>
-        </div>
 
-        <div id="detail_form">
-            <div id="productDetail"></div>
+            <div id="detail_form">
+                <div id="productDetail"></div>
+            </div>
         </div>
 
         <div id="admin_form">
@@ -187,6 +192,29 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Kết Nối với Chúng Tôi</h3>
+            <div class="source">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/luuthemanhgch17279/MobileShop.github.io.git">GitHub</a>
+            </div>
+            <div class="source">
+                <i class="fab fa-facebook"></i>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="source">
+                <i class="fab fa-instagram"></i>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="source">
+                <i class="fab fa-twitter"></i>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="./js/index.js"></script>
 

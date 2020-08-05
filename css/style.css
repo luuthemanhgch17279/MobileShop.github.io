@@ -9,6 +9,7 @@
 body {
     font-size: 14px;
     line-height: 22px;
+    background-color: #f5f6fa;
 }
 
 .bold {
@@ -22,17 +23,17 @@ body {
 
 header {
     width: 100%;
-    height: 170px;
+    background-color: #f5f6fa;
 }
 
 .head {
-    height: 122px;
     text-align: center;
-    padding-top: 35px;
 }
 
 .head h1 {
-    font-size: 50px;
+    font-size: 80px;
+    margin: 40px;
+    color: #383838;
 }
 
 
@@ -44,31 +45,23 @@ header {
 .nav {
     height: 48px;
     background-color: #383838;
-    border-radius: 10px;
 }
 
 .nav ul {
-    width: 75%;
-    display: flex;
     list-style: none;
+    display: flex;
 }
 
 .nav ul li {
     color: beige;
-    height: 48px;
 }
 
 .nav ul li button {
-    padding: 5px 20px;
+    padding: 12px 20px;
     color: #f5f6fa;
-    height: 48px;
     background-color: #383838;
     border: 0px;
     border-radius: 10px;
-}
-
-.nav ul li button a {
-    color: #f5f6fa;
 }
 
 .nav ul li button:hover {
@@ -76,25 +69,12 @@ header {
     color: #f5f6fa;
 }
 
-.search button {
-    padding: 8px;
-    margin: 5px 5px;
-    border-radius: 50%;
-    border: 2px solid #f5f6fa;
-    background-color: #2b0b0c;
-}
-
 .search input {
-    padding: 5px;
-    margin: 5px;
+    margin-top: 2px;
+    padding: 7px 5px;
     border-radius: 10px;
     color: #383838;
-}
-
-.search i,
-input {
-    color: #f5f6fa;
-    float: left;
+    margin-left: 40rem;
 }
 
 
@@ -124,7 +104,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .content ul li {
@@ -197,22 +177,62 @@ strong {
     padding: 10px 0;
 }
 
-#cart-show {
+.cart-header {
+    width: 100%;
+    height: 48px;
     background-color: #383838;
-    padding: 8px;
-    border-radius: 8px;
 }
 
-#cart_form i,
+.cart-header i,
 span {
-    font-size: 25px;
-    margin-left: 10px;
+    float: right;
+    font-size: 27px;
     color: #f5f6fa;
+    padding: 0 5px;
+}
+
+.cart-header i {
+    margin-top: 8px;
+}
+
+.cart-header .btn-log {
+    padding: 11px 15px;
+    border: 0px;
     background-color: #383838;
+    color: #f5f6fa;
+}
+
+.cart-header .btn-log:hover {
+    background-color: #f5f6fa;
+    color: #2f3640;
 }
 
 
 /* Guest user form */
+
+
+/* filter-form */
+
+#filterBrand {
+    background-color: #383838;
+    height: 50px;
+}
+
+.itemBrand {
+    list-style: none;
+    font-size: 17px;
+    padding: 10px 50px;
+    background-color: #383838;
+    color: #f5f6fa;
+}
+
+.itemBrand:hover {
+    background-color: #B81D22;
+    color: #f5f6fa;
+}
+
+
+/* filter-form *
 
 
 /* admin form */
@@ -250,6 +270,7 @@ span {
     margin-right: 25px;
     margin-top: 3px;
     font-size: 30px;
+    color: #383838;
 }
 
 .btn {
@@ -293,30 +314,6 @@ span {
 /* admin form */
 
 
-/* filter-form */
-
-#filter_form {
-    width: 25%;
-    margin-top: 20px;
-}
-
-.itemBrand {
-    width: 290px;
-    padding: 21px 0px;
-    list-style: none;
-    font-size: 17px;
-    font-style: oblique;
-    background-color: #383838;
-    color: #f5f6fa;
-    border: 2px solid;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-
-/* filter-form */
-
-
 /* Slide */
 
 .slides {
@@ -333,3 +330,43 @@ span {
 
 
 /* Slide */
+
+
+/* Fotter */
+
+footer {
+    width: 100%;
+    height: 110px;
+    background-color: #383838;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer h3 {
+    color: #f5f6fa;
+    padding-top: 10px;
+}
+
+.source a,
+i {
+    float: left;
+    color: #f5f6fa;
+    margin-top: 16px;
+}
+
+.source i {
+    font-size: 30px;
+    padding-left: 8rem;
+}
+
+.source a {
+    font-size: 20px;
+    padding-left: 7px;
+}
+
+.source a:hover {
+    color: #B81D22;
+}
+
+
+/* Fotter */

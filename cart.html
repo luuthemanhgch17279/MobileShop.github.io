@@ -18,38 +18,39 @@
 </head>
 
 <body>
-    <header class="container">
-        <div class="head">
-            <h1 class="bold">Mobile Shop</h1>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="index.html"><button>Home</button></a></li>
-                <li><button>About us</button></li>
-                <li><button>Contact</button></li>
-            </ul>
-            <div class="search">
-                <input type="text" value="" placeholder="Search">
-                <button><i class="fas fa-search"></i></button>
+    <header>
+        <div id="cart_form">
+            <div id="cart-show" class="cart-header">
+                <div class="container">
+                    <a href="cart.html">
+                        <span id="cartNumbers">0</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
             </div>
+        </div>
+
+        <div class="head">
+            <h1 class="bold">Mobile shop</h1>
+        </div>
+
+        <div class="nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><button>Trang chủ</button></a></li>
+                    <li><a href="#"><button>Giới Thiệu</button></a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <div class="container">
-        <div id="cart_form">
-            <a href="cart.html">
-                <div id="cart-show">
-                    <!-- <h3>Cart</h3>    -->
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cartNumbers">0</span>
-                </div>
-            </a>
-        </div>
         <table class="listCartProduct table table-striped">
             <thead>
-                <th>Name Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Tổng Tiền</th>
+                <th>Tác Vụ</th>
             </thead>
             <tbody id="content">
                 <!-- js code -->
@@ -61,20 +62,20 @@
         <!-- đoạn này bị ẩn , nó hiện lên khi ng dùng ấn vào Payment  -->
         <div id="userInfor">
             <form>
-                <h3>Please enter you information to complete bill.</h3>
-                <label>Full Name:</label><br>
+                <h3>Thông Tin Khách Hàng </h3>
+                <label>Họ Và Tên</label><br>
                 <input id="inName" class="form-control" type="text" value=""><br>
-                <label>Phone Number:</label><br>
+                <label>Số Điện Thoại</label><br>
                 <input id="inPhone" class="form-control" type="text" value=""><br><br>
-                <label>Address:</label><br>
+                <label>Địa Chỉ Giao Hàng</label><br>
                 <input id="inAdd" class="form-control" type="text" value=""><br><br>
                 <label>Ghi Chú</label><br>
                 <textarea id="inNote" name="note" placeholder="..." cols="30" rows="10"></textarea></br>
                 <input id="vehicle1" type="checkbox" name="vehicle1" value="GiaoHang1">
-                <label for="vehicle1">Giao Hàng Tiêu Chu?n</label><br>
+                <label for="vehicle1">Giao Hàng Tiêu Chuẩn</label><br>
                 <input id="vehicle2" type="checkbox" name="vehicle2" value="GiaHang2">
                 <label for="vehicle2">Giao Hàng Nhanh</label><br>
-                <button id="btnBuy" class="btn btn-secondary">Mua Hàng</button>
+                <button id="btnBuy" class="btn btn-secondary">Đặt Hàng</button>
             </form>
         </div>
     </div>

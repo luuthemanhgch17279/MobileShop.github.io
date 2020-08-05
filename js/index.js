@@ -23,7 +23,7 @@ var productData = [{
     {
         productID: "P003",
         productName: "Oppo A31",
-        productBrand: "OPPO",
+        productBrand: "Oppo",
         price: 4190000,
         quantity: 45,
         description: "Với bộ nhớ trong cực lớn 128GB, viên pin dung lượng cao 4230 mAh và màn hình giọt nước 6,5 inch, OPPO A31 mang đến cho bạn những trải nghiệm lớn hơn, giúp cuộc sống trở nên dễ dàng hơn.",
@@ -78,7 +78,7 @@ var productData = [{
     {
         productID: "P008",
         productName: "OPPO Reno3",
-        productBrand: "OPPO",
+        productBrand: "Oppo",
         price: 11490000,
         quantity: 32,
         description: "Bạn đang cần một chiếc điện thoại chụp ảnh thực sự chuyên nghiệp ở cả camera trước và sau, hãy đến với OPPO Reno3 Pro, chiếc “camera phone” đẳng cấp, sẽ cùng bạn khai phá những khoảnh khắc vàng trong mọi bối cảnh.",
@@ -89,7 +89,7 @@ var productData = [{
     {
         productID: "P009",
         productName: "OPPO A92",
-        productBrand: "OPPO",
+        productBrand: "Oppo",
         price: 6490000,
         quantity: 46,
         description: "Màn hình chấm O tinh tế, hiệu năng mạnh mẽ, 4 camera AI 48MP và viên pin dung lượng cực “khủng”, bạn sẽ hoàn toàn hài lòng về OPPO A92, chiếc điện thoại siêu mượt mà, đầy đẳng cấp.",
@@ -366,9 +366,9 @@ btnLogout.addEventListener("click", function() {
 function showLoginForm() {
     loginForm.style.display = "block";
     btnLogin.style.display = "block";
+    cartForm.style.display = "block";
     regiterForm.style.display = "none";
     userForm.style.display = "none";
-    cartForm.style.display = "none";
     detailForm.style.display = "none";
     filterForm.style.display = "none";
     slideForm.style.display = "none";
@@ -386,9 +386,11 @@ function showAdminForm() {
     btnLogin.style.display = "none";
     btnManageProduct.style.display = "none";
     filterForm.style.display = "none";
+    searchKey.style.display = "none";
     btnManageBill.style.display = "block";
     btnManageProduct.style.display = "block";
     btnAdd.style.display = "block";
+
 }
 
 function showGuestForm() {
@@ -614,21 +616,22 @@ loadNumberInCart();
 function loadListBill() {
     const billFormLocalStorage = localStorage.getItem('bill');
     const billParseJson = JSON.parse(billFormLocalStorage);
-    const bill = (Object.values(billParseJson));
-    console.log(bill.length);
-    console.log(bill[0].product);
-    console.log(bill[0].product[0].productName);
     const listBill = document.getElementById('listBill');
-    for (let i = 0; i < bill.length; i++) {
-        listBill.insertAdjacentHTML('beforeend', `
+    if (billParseJson != undefined) {
+        const bill = (Object.values(billParseJson));
+        for (let i = 0; i < bill.length; i++) {
+            listBill.insertAdjacentHTML('beforeend', `
         <tr>
             <td>${bill[i].name}</td> 
             <td>${bill[i].phone}</td> 
             <td>${bill[i].add}</td>     
             <td>${bill[i].date}</td> 
-            <td>${convertVND(bill[i].total.toString())}d</td>   
+            <td>${convertVND(bill[i].total.toString())}đ</td>   
         </tr>
         `)
+        }
+    } else {
+        listBill.innerHTML = 'Danh Sácch Bill Trống!'
     }
 }
 loadListBill();
@@ -693,36 +696,6 @@ function filterProduct(listData, keyValue) {
     })
     loadListProduct(dataSearchList);
 }
-
-//function này gender ra dc 1 sublist gợi ý tìm kiếm.
-// function showSearchList(listData, keyValue) {
-//     console.log(listData);
-//     if (keyValue.length > 0) {
-//         if (listData.length > 3) {
-//             for (let i = 0; i < 3; i++) {
-//                 listSearch.insertAdjacentHTML('beforeend', `
-//                 <li class="item">
-
-//                 </li>`);
-
-//             }
-//         } else
-//         if (listData.length > 0) {
-//             for (let i = 0; i < a; i++) {
-//                 listSearch.insertAdjacentHTML('beforeend', `
-//                 <li class="item">
-//                 <img src="" alt="">
-//                 <a onclick="loadDetailProduct(${listData[i]})"> ${listData[i].productName} </a>
-//                 </li>`);
-//             }
-//         }
-//     } else {
-//         listSearch.innerHTML = '';
-//     }
-
-//     contentUserForm.innerHTML = `<h2>Tìm th?y ${listData.length} k?t qu? cho "${keyValue}"</h2>`;
-//     loadListProduct(listData);
-// }
 
 //function này đổi đơn vị tiền tệ
 function convertVND(a) {
