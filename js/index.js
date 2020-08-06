@@ -456,7 +456,7 @@ const listProduct = document.getElementById('listProduct');
 // function này đọc dữ liệu từ array data ra và show ra html (màn hình)
 function loadListProduct(chosenProduct) {
     if (chosenProduct.length == 0) {
-        listProduct.innerHTML = 'không tìm thấy kết quả nào phù hợp với từ khóa'
+        listProduct.innerHTML = 'không tìm thấy kết quả nào phù hợp vớii từ khóa'
     } else {
         listProduct.innerHTML = '';
         for (let i = 0; i < chosenProduct.length; i++) {
@@ -466,7 +466,7 @@ function loadListProduct(chosenProduct) {
                     <h5>${chosenProduct[i].productName}</h5>
                     <strong>${convertVND(chosenProduct[i].price.toString())}d</strong>
                 <button class="btnAddCart">Thêm vào giỏ hàng</button>
-                <button class="btnDetail">Chi tiết sản phẩm</button>
+                <button class="btnDetail">Chi tiếtt sản phẩm</button>
             </div>
         </li>`)
         };
@@ -547,9 +547,9 @@ function loadDetailProduct(chosenProduct) {
 
     for (let i = 0; i < btnAddCart.length; i++) {
         btnAddCart[i].addEventListener('click', () => {
-            alert('Thêm S?n Ph?m Thành Công');
-            cartNumber(chosenProduct[i]);
-            cartTotal(chosenProduct[i]);
+            alert('Thêm Sản Phẩm Thành Công');
+            cartNumber(chosenProduct);
+            cartTotal(chosenProduct);
         })
     }
 }
